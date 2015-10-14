@@ -1,0 +1,10 @@
+flume:
+  image: sectong/flume
+  ports:
+    - "5140/udp:5140/udp"
+  environment:
+    FLUME_CONF_FILE: /var/tmp/flume/flume.conf
+    FLUME_AGENT_NAME: a1
+
+  volumes:
+    - ./config:/var/tmp/flume
